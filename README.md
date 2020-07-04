@@ -6,7 +6,7 @@
 
 ## About me:
 
-I am currently working as a Business Analyst at a media advertising agency but more importantly I am an aspiring data scientist. After graduating with a Bachelors in Business Administration I've made the realization of how powerful data science can be in making better-informed decisions. I've been using online resources to learn Python such as [Dataquest](https://www.dataquest.io/)  In this repository you will find my Data Science projects.
+I am currently working as a Business Analyst at a media advertising agency but more importantly I am an aspiring data scientist. After graduating with a Bachelors in Business Administration I've made the realization of how powerful data science can be in making better-informed decisions. I've been using online resources to learn Python such as [Dataquest](https://www.dataquest.io/).  In this repository you will find my Data Science projects.
 
 Feel free to contact me, make suggestions or propose new projects.
 
