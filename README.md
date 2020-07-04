@@ -4,7 +4,6 @@
   <img src="https://raw.githubusercontent.com/JasonMinhas/DataScience/master/Images/Jason_Minhas_Data_Science_Banner.png" alt="Jason_Minhas_Data_Science_Banner.png" border="0" />
 </p>
 
-# Journey to Becoming a Data Scientist
 ## About me:
 
 My name is Jason Minhas and I'm currently working as a Business Analyst at a media advetising agency but more importantly I am an aspiring data scientist. After graduating with a Bachelors in Business Administration I've made the realization of how powerful data science can be in making better-informed decisions. In this repository you will find my Data Science projects.
