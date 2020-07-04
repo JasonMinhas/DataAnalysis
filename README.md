@@ -7,7 +7,7 @@
 # Journey to Becoming a Data Scientist
 ## About me:
 
-My name is Jason Minhas and I'm currently working as a Business Analyst at a media advetising agency but more important I am an aspiring data scientist. After graduating with a Bachelors in Business Administration I've made the realization on powerful data science and analysis can be in making better-informed decisions.  In this repository you will find my Data Science projects.
+My name is Jason Minhas and I'm currently working as a Business Analyst at a media advetising agency but more importantly I am an aspiring data scientist. After graduating with a Bachelors in Business Administration I've made the realization of how powerful data science can be in making better-informed decisions. In this repository you will find my Data Science projects.
 
 Feel free to contact me, make suggestions or propose new projects.
 
