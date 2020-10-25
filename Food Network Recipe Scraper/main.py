@@ -7,7 +7,7 @@ import time
 def main():
     gf.display_settings()
     start_time = time.time()
-    # todo allow user to select how many reciepes they wanat to look at
+    # todo allow user to select how many recipes they want to look at
     search_keyword = 'beef empanadas'
     search_url, search_html = get_search_html(search_keyword)
     gf.time_checkpoint('1', start_time)
@@ -19,7 +19,7 @@ def main():
     gf.time_checkpoint('4', start_time)
     extract_recipe_ingredients(recipe_df)
     gf.time_checkpoint('5', start_time)
-    clean_df(recipe_df)
+    analyze_df(recipe_df)
     gf.time_checkpoint('6', start_time)
     gf.save_df_to_excel(recipe_df, f'C:/Users/Jason Minhas/Documents/food_network_web_scrape/{search_keyword}')
     gf.time_checkpoint('7', start_time)
@@ -101,8 +101,8 @@ def extract_recipe_ingredients(recipe_df):
         recipe_df.at[url_index, 'ingredients'] = recipe_ingredients
 
 
-def clean_df(recipe_df):
-    main_ingredients_series = pd.Series()
+def analyze_df(recipe_df):
+    main_ingredients_series = pd.Series(dtype=str)
 
     for ingredients_list in recipe_df['ingredients']:
         if ingredients_list is not None:
