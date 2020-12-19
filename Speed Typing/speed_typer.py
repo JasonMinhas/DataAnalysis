@@ -38,13 +38,13 @@ def speed_test_typer():
     # click input email
     element = WebDriverWait(driver, 8).until(
         EC.presence_of_element_located((By.XPATH, '//*[@id="identifierId"]')))
-    element.send_keys('jasonsminhas@gmail.com')
+    element.send_keys('EMAIL HERE')
     element.send_keys(Keys.RETURN)
 
     # click input password
     element = WebDriverWait(driver, 8).until(
         EC.presence_of_element_located((By.XPATH, '//*[@id="password"]/div[1]/div/div[1]/input')))
-    element.send_keys('Islandbox1')
+    element.send_keys('PASSWORD HERE')
     element.send_keys(Keys.RETURN)
 
     # find text
