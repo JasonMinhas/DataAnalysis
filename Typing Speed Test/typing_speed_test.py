@@ -12,6 +12,7 @@ import re
 def main():
     speed_test_typer()
 
+
 def speed_test_typer():
     path = 'C:\Program Files (x86)\chromedriver.exe'
     global driver
