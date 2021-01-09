@@ -23,6 +23,13 @@ def speed_test_typer():
 
     # find text
     element = WebDriverWait(driver, 8).until(
+        EC.presence_of_element_located((By.XPATH, '//*[@id="CybotCookiebotDialogBodyLevelButtonLevelOptinAllowallSelection"]'))
+    )
+    element.click()
+
+    time.sleep(2)
+    # find text
+    element = WebDriverWait(driver, 8).until(
         EC.presence_of_element_located((By.ID, 'row1'))
     )
 
@@ -44,5 +51,8 @@ def speed_test_typer():
         element.send_keys(' ')
 
 
+    print('stop')
+
 if __name__ == '__main__':
     main()
+    
