@@ -1,6 +1,8 @@
 import pandas as pd
 import numpy as np
 import re
+import seaborn as sns
+import matplotlib.pyplot as plt
 
 dete_df = pd.read_csv('http://opendata.dete.qld.gov.au/human-resources/dete-exit-survey-january-2014.csv', encoding='cp1252')
 dete_df['source'] = 'Department of Education, Training and Employment'
@@ -97,6 +99,9 @@ study_travel_col = ['Contributing Factors. Study', 'Contributing Factors. Travel
 tafe_df['Study/Travel'] = tafe_df[study_travel_col].any(axis=1)
 after = pd.concat([tafe_df[study_travel_col], tafe_df['Study/Travel']], axis=1)
 
+# make age naming convention match dete_df
+tafe_df['CurrentAge.     Current Age'] = tafe_df['CurrentAge.     Current Age'].str.replace(' – ', '-')
+
 # change column names on tafe to match dete
 header_dict ={
     'CESSATION YEAR': 'Cease Date',
@@ -135,19 +140,68 @@ tafe_df.rename(columns=header_dict, inplace=True)
 # ------merged both dfs-----
 
 # merge both df's
-print(dete_df.dtypes)
-print(tafe_df.dtypes)
 merged_df = pd.concat([dete_df, tafe_df], join='inner')
+# merged_df.to_excel('C:/Users/jason/personal_projects/DataScience/Clean And Analyze Employee Exit Surveys/merged_df.xlsx', index=False)
 
 # save to excel file
-merged_preview_clean = df_column_summary(merged_df)
-merged_preview_clean.to_excel('C:/Users/jason/personal_projects/DataScience/Clean And Analyze Employee Exit Surveys/header_summary/merged_exit_survey_header_summary.xlsx', index=False)
+# merged_preview_clean = df_column_summary(merged_df)
+# merged_preview_clean.to_excel('C:/Users/jason/personal_projects/DataScience/Clean And Analyze Employee Exit Surveys/header_summary/merged_exit_survey_header_summary.xlsx', index=False)
 
+# table of nulls by source
+source_null_grp = merged_df.groupby('source').count().transpose()
 
+# visual of nulls by source
+# merged_graph = merged_df.set_index('source')
+# plot = sns.heatmap(merged_graph.isnull(), cbar=False)
+# plt.show()
 
-# todo handle all the '-' and nan
+# ------merged cleaning and restructure dataset to optimize for further cleaning and visuals-----
+# melt contributing columns
+contributing_cols = ['Career move to public sector', 'Career move to private sector', 'Interpersonal conflicts',
+                     'Job dissatisfaction', 'Maternity/family', 'Study/Travel', 'Ill Health']
+non_contributing_col = [col for col in list(merged_df.columns) if col not in contributing_cols]
 
-# todo make values for each column consistent
+merged_melt_df = pd.melt(merged_df, id_vars=non_contributing_col, value_vars=contributing_cols,
+                         var_name='contributing_factors', value_name='contributing_values')
 
+# replace true and false with 0, 1
+merged_melt_df['contributing_values'] = merged_melt_df['contributing_values'].replace({True: 1, False: 0})
+
+# melt likert columns
+likert_cols = ['Professional Development', 'Opportunities for promotion', 'Staff morale', 'Physical environment',
+               'Worklife balance', 'Stress and pressure support', 'Performance of supervisor', 'Peer support',
+               'Skills', 'Coach', 'Feedback', 'Further PD', 'Communication', 'Kept informed']
+non_likert_col = [col for col in list(merged_melt_df.columns) if col not in likert_cols]
+
+merged_melt_df = pd.melt(merged_melt_df, id_vars=non_likert_col, value_vars=likert_cols,
+                         var_name='likert_factors', value_name='likert_values')
+merged_melt_df['likert_values'] = merged_melt_df['likert_values'].replace(
+    {
+        'Strongly Agree': 2,
+        'Agree': 1,
+        'Neutral': 0,
+        'Disagree': -1,
+        'Strongly Disagree': -2,
+        'M': np.nan, # todo find out what 'M' stands for
+        'Not Applicable': np.nan
+    }
+)
+
+# melt service length columns
+service_length_cols = ['LengthofServiceOverall', 'LengthofServiceCurrent']
+non_service_length_col = [col for col in list(merged_melt_df.columns) if col not in service_length_cols]
+
+merged_melt_df = pd.melt(merged_melt_df, id_vars=non_service_length_col, value_vars=service_length_cols,
+                         var_name='service_length_factors', value_name='service_length_values')
+
+# merged_melt_df.to_excel('C:/Users/jason/personal_projects/DataScience/Clean And Analyze Employee Exit Surveys/merged_melt_df.xlsx', index=False)
+
+# ------Analysis-----
+
+# todo stacked bar chart for likert that sums values
+likert_colors = ['white', 'firebrick', 'lightcoral', 'gainsboro', 'cornflowerblue', 'darkblue']
+# grp = merged_melt_df.groupby(by=['likert_factors', 'likert_values']).count()
+pvt = pd.pivot_table(merged_melt_df, values='likert_values', index='likert_factors', columns='likert_values')
+grp.plot.bar(stacked=True)
 
 print('stop')
