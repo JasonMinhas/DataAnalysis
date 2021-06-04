@@ -6,9 +6,9 @@
 
 ## About me:
 
-Welcome to my python portfolio! I am currently working as a Campaign Operations Engineer at a media advertising agency but more importantly I am an aspiring data scientist. After graduating with a Bachelors in Business Administration I've made the realization of how powerful data science can be in making better-informed decisions. I've been using online resources to learn Python such as [Dataquest](https://www.dataquest.io/).  Below you will find my Data Science projects in descending order.
+Welcome to my analytics portfolio! I am currently working as a Campaign Operations Engineer at a media advertising agency but more importantly I am looking to improve my abilty to merge technical and analytical skills. After graduating with a Bachelors in Business Administration I've made the realization of how useful data analytics can be in making better-informed decisions. I've been using online resources to learn Python such as [Dataquest](https://www.dataquest.io/).  Below you will find my Analytical projects in descending order.
 
-Feel free to contact me, make suggestions or propose new projects.
+Feel free to contact me if you want to talk data or propose new projects.
 
 ***
 
