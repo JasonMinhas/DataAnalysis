@@ -14,7 +14,7 @@ Feel free to contact me, make suggestions or propose new projects.
 
 My Projects in Jupyter Notebook:
 
-* [Calm App Data Analysis on User Acquisition](https://github.com/JasonMinhas/DataAnalysis/blob/master/Calm%20Data%20Analysis/calm_data_analysis.ipynb)
+* [Calm App Data Analysis to Optimize for User Acquisition](https://github.com/JasonMinhas/DataAnalysis/blob/master/Calm%20Data%20Analysis/calm_data_analysis.ipynb)
 * [Visualizing Earnings Based On College Majors](https://github.com/JasonMinhas/DataScience/blob/master/Visualizing%20Earnings%20Based%20On%20College%20Majors/Visualizing%20Earnings%20Based%20On%20College%20Majors.ipynb)
 * [Exploring Hacker News Posts](https://github.com/JasonMinhas/DataScience/blob/master/Exploring%20Hacker%20News%20Posts/Exploring%20Hacker%20News%20Posts.ipynb)
 * [Profitable App Profiles for the App Store and Google Play Markets](https://github.com/JasonMinhas/DataScience/blob/master/Profitable%20App%20Profiles%20for%20the%20App%20Store%20and%20Google%20Play%20Markets/Profitable%20App%20Profiles%20for%20the%20App%20Store%20and%20Google%20Play%20Store.ipynb)
