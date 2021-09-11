@@ -6,7 +6,7 @@
 
 ## About me:
 
-Welcome to my analytics portfolio! I am currently working as an Analytics Manager at a media advertising agency but more importantly I am looking to improve my ability to merge technical and analytical skills. After graduating with a Bachelors in Business Administration I've made the realization of how useful data analytics can be in making better-informed decisions. I've been using online resources to learn Python such as [Dataquest](https://www.dataquest.io/).  Below you will find my Analytical projects in descending order.
+Welcome to my analytics portfolio! I am currently working as an Analytics Manager at a media advertising agency but more importantly I am looking to improve my ability to merge technical and analytical skills. After graduating with a Bachelors in Business Administration I've made the realization of how useful data analytics can be in making better-informed decisions. I've been using online resources to learn Python such as [Dataquest](https://www.dataquest.io/).  Below you will find my Analytical projects with my most recent on top!
 
 Feel free to contact me if you want to talk data or propose new projects.
 
