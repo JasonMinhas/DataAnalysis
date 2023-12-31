@@ -6,14 +6,15 @@
 
 ## About me:
 
-Welcome to my python portfolio! I am currently working as a Campaign Operations Engineer at a media advertising agency but more importantly I am an aspiring data scientist. After graduating with a Bachelors in Business Administration I've made the realization of how powerful data science can be in making better-informed decisions. I've been using online resources to learn Python such as [Dataquest](https://www.dataquest.io/).  Below you will find my Data Science projects in descending order.
+Welcome to my analytics portfolio! I am currently working as an Analytics Manager at a media advertising agency but more importantly I am looking to improve my ability to merge technical and analytical skills. After graduating with a Bachelors in Business Administration I've made the realization of how useful data analytics can be in making better-informed decisions. I've been using online resources to learn Python such as [Dataquest](https://www.dataquest.io/).  Below you will find my Analytical projects with my most recent on top!
 
-Feel free to contact me, make suggestions or propose new projects.
+Feel free to contact me if you want to talk data or propose new projects.
 
 ***
 
 My Projects in Jupyter Notebook:
 
+* [Calm App Data Analysis to Optimize for User Acquisition](https://github.com/JasonMinhas/DataAnalysis/blob/master/Calm%20Data%20Analysis/calm_data_analysis.ipynb)
 * [Visualizing Earnings Based On College Majors](https://github.com/JasonMinhas/DataScience/blob/master/Visualizing%20Earnings%20Based%20On%20College%20Majors/Visualizing%20Earnings%20Based%20On%20College%20Majors.ipynb)
 * [Exploring Hacker News Posts](https://github.com/JasonMinhas/DataScience/blob/master/Exploring%20Hacker%20News%20Posts/Exploring%20Hacker%20News%20Posts.ipynb)
 * [Profitable App Profiles for the App Store and Google Play Markets](https://github.com/JasonMinhas/DataScience/blob/master/Profitable%20App%20Profiles%20for%20the%20App%20Store%20and%20Google%20Play%20Markets/Profitable%20App%20Profiles%20for%20the%20App%20Store%20and%20Google%20Play%20Store.ipynb)
